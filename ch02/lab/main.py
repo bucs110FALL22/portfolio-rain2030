@@ -20,6 +20,7 @@ print("Have A Great Day!")
 #----------------------------------------------------------
 print("") # for formatting/ spacing
 print("") # for formatting/ spacing
+
 #Part B
 print("Selcting a random number from 5,10,13,44,72")
 numbers=[10,5,13,44,72]

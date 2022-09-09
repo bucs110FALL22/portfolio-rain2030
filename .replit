@@ -1,3 +1,2 @@
-
 language="pygame"
-
+run = "ch02/lab/main.py"
