@@ -1,43 +1,8 @@
-import turtle #1. import modules
-import random
-from random import randint
 import pygame
-import math
 import time
+import math
+import turtle
 
-#Part A
-window = turtle.Screen() # 2.  Create a screen
-window.bgcolor('lightblue')
-
-michelangelo = turtle.Turtle() # 3.  Create two turtles
-leonardo = turtle.Turtle()
-michelangelo.color('orange')
-leonardo.color('blue')
-michelangelo.shape('turtle')
-leonardo.shape('turtle')
-
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
-
-## 5. Your PART A code goes here
-
-
-
-for turn in range(30):
-  michelangelo.down()
-  leonardo.down()
-  michelangelo.forward(randint(1,5))
-  leonardo.forward(randint(1,5))
-  michelangelo.up()
-  leonardo.up()
-  #-----------------------------------------
-# PART B - complete part B here
-michelangelo.ht()
-leonardo.ht()
-michelangelo.clear()
-leonardo.clear()
 
 pygame.init()
  
