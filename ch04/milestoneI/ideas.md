@@ -18,7 +18,7 @@ For each one below you should have a basic description of a program idea, a coup
 
 ## Project Idea 1
 
-< add your idea here >
+Visual Novel
 
 ## Project Idea 2
 
