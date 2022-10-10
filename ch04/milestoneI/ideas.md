@@ -18,12 +18,12 @@ For each one below you should have a basic description of a program idea, a coup
 
 ## Project Idea 1
 
-Visual Novel
+Visual Novel - Display Gui of pictures and text based interaction of chracters to complete a story of sort.
 
 ## Project Idea 2
 
-< add your idea here >
+pong - good old pong with some kind of special interactions to change the modifiers of the ball
 
 ## Project Idea 3
 
-< add your idea here >
+Simple fighting game - 2d platformer with a couple of characters to choose from
