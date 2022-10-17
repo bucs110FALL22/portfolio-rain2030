@@ -36,7 +36,7 @@ for i in range (start, upper_limit+1):
   if count > max_so_far:
     max_so_far = count
     max_val = i
-print("max value:",max_val,"max so far:",max_so_far)
+print("max value:",max_val,"max so far:",m```````````````````````````````````````````ax_so_far)
 coordinates = list(iters.items())
 pygame.draw.lines(display, 'black', False, coordinates)
 font = pygame.font.SysFont('Arial',15)
