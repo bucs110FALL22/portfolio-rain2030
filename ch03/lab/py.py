@@ -1,71 +1,82 @@
-import pygame
-import time
-import math
 import turtle
+import pygame
+import math
+import random
+window = turtle.Screen()
+window.bgcolor('lightblue')
+michelangelo = turtle.Turtle()
+leonardo = turtle.Turtle()
+michelangelo.color('orange')
+leonardo.color('blue')
+michelangelo.shape('turtle')
+leonardo.shape('turtle')
+michelangelo.up()
+leonardo.up()
+michelangelo.goto(-50,20)
+leonardo.goto(-50,40)
+michelangelo.pendown()
+leonardo.pendown()
+for turn in range(50):
+  michelangelo.forward(random.randrange(1, 10,1))
+  leonardo.forward(random.randrange(1, 10, 1))
 
-
-pygame.init()
- 
-# create the display surface object
-# of specific dimension.
-window = pygame.display.set_mode((100, 100))
- 
-# Fill the scree with white color
-window.fill((255, 255, 255))
-turtle.fillcolor('orange')
-turtle.begin_fill()
-coords = []
-num_sides = 360
-side_length = 1
-offset = 15
-for nums in range(2):
-  for nums in range(num_sides):
-    theta = (2.0 * math.pi * nums / num_sides)
-    x = side_length * math.cos(theta) + offset
-    y = side_length * math.sin(theta) + offset
-    coords.append((x, y))
-    turtle.pendown()
-    turtle.forward(side_length)
-    turtle.left(360/num_sides)
-    pygame.time.wait(10)
-  pygame.draw.polygon(window, "purple", coords)
-  pygame.display.flip()
-  turtle.clear()
-  window.fill('black')
-  num_sides = 3
-  side_length = 30
-num_sides = 4
-for nums in range(2):
-  for nums in range(num_sides):
-    theta = (2.0 * math.pi * nums / num_sides)
-    x = side_length * math.cos(theta) + offset
-    y = side_length * math.sin(theta) + offset
-    coords.append((x, y))
-    turtle.pendown()
-    turtle.forward(side_length)
-    turtle.left(360/num_sides)
-    pygame.time.wait(10)
-  pygame.draw.polygon(window, "purple", coords)
-  pygame.display.flip()
-  turtle.clear()
-  window.fill('black')
-  num_sides = 6
-  side_length = 30
-  
-num_sides = 9
-for nums in range(num_sides):
-  theta = (2.0 * math.pi * nums / num_sides)
-  x = side_length * math.cos(theta) + offset
-  y = side_length * math.sin(theta) + offset
-  coords.append((x, y))
-  turtle.pendown()
-  turtle.forward(side_length)
-  turtle.left(360/num_sides)
-  pygame.time.wait(10)
-pygame.draw.polygon(window, "purple", coords)
-pygame.display.flip()
+michelangelo.up()
+leonardo.up()
+michelangelo.setposition(-50,20)
+leonardo.setposition(-50,40)
 turtle.clear()
-window.fill('black')
+window.exitonclick()
 
-  
+#Part B
+pygame.init()
+window = pygame.display.set_mode((500,500))
+
+def drawShape(num_sides):
+  coords = []
+  offset = 200
+  side_length = 60
+  num_sides = num_sides
+
+  for n in range(num_sides):
+    thetha = (2.0 * math.pi * n) / num_sides
+    x = side_length * math.cos(thetha) + offset
+    y = side_length * math.sin(thetha) + offset
+    coords.append([x,y])
+    print(thetha)
+    print('x=', x)
+    print('y=', y)
+  return coords
+
+
+
+window.fill("white")
+pygame.display.flip()
+bg = 'green'
+
+pygame.draw.polygon(window, bg, drawShape(3))
+pygame.display.flip()
+pygame.time.delay(150)
+window.fill("white")
+pygame.display.flip()
+pygame.draw.polygon(window, bg, drawShape(4))
+pygame.display.flip()
+pygame.time.delay(150)
+window.fill("white")
+pygame.display.flip()
+bg = 'red'
+pygame.draw.polygon(window, bg, drawShape(6))
+pygame.display.flip()
+pygame.time.delay(150)
+window.fill("white")
+pygame.display.flip()
+pygame.draw.polygon(window, bg, drawShape(9))
+pygame.display.flip()
+pygame.time.delay(150)
+window.fill("white")
+pygame.display.flip()
+bg = 'yellow'
+pygame.draw.polygon(window, bg, drawShape(360))
+pygame.display.flip()
+pygame.time.delay(150)
+window.fill("white")
 pygame.display.flip()
