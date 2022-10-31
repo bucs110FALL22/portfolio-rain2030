@@ -1,23 +1,12 @@
-import datetime
-timern = datetime.datetime.now()
-class Point():
+import time
+class Shelter():
 
-  def __init__(self, name="Bobby", type="Dog", id = 0, time = timern):
+  def __init__(self, name, type, time, date):
     self.name = name
     self.type = type
-    self.id = id + 1
+    self.id = id(self)
     self.time = time
-    
-p1 = Point()
-print(p1.name, p1.type, p1.id, p1.time, type(p1))
-p2 = Point()
-print(p2.name, p2.type, p2.id, p2.time, type(p2))
+    self.date = date
 
-p1.name = "Merry"
-p1.type = "Dog"
-p1.id= 1
-p2.name = "champ"
-p2.type = 'Turtle'
-p2.id = 0 
-print(p1.name, p1.type, p1.id, p1.time, type(p1))
-print(p2.name, p2.type, p2.id, p2.time, type(p2))
+id1 = Shelter("Bobby", "Bulldog", "12/12/12", time.strftime("%d/%m/%Y"))
+print(id1.name, id1.type, id1.id, id1.time, id1.date, id1.id)
