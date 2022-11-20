@@ -26,11 +26,12 @@ Answer the following questions about your controller class
 
 1. do you have a mainloop?
     * if you have sub loops, are they exclusive? i.e. only 1 will ever run at a time
-
+  yes, it should
 2. Are you responding to events first in your loop?
-
+  yes
 3. Are you updating models after events?
-
+  yes
 4. Are you re-drawing the background, THEN each screen element every frame?
-
+  no
 5. Are you calling pygame.flip() or pygame.update() at the end of your mainloop
+  
