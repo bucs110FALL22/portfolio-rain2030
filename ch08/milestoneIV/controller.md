@@ -34,4 +34,4 @@ Answer the following questions about your controller class
 4. Are you re-drawing the background, THEN each screen element every frame?
   no
 5. Are you calling pygame.flip() or pygame.update() at the end of your mainloop
-  
+  no
